@@ -8,5 +8,7 @@
   "выбросить ошибку": "throw error",
   "Переключить": "Toggle",
   "Короткий язык": "En",
-  "Войти": "Enter"
+  "Войти": "Enter",
+  "increment": "increment",
+  "decrement": "decrement"
 }
