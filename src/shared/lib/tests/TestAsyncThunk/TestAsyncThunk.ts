@@ -10,6 +10,7 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
     getState: () => StateSchema;
 
     actionCreator: ActionCreatorType<Return, Arg, RejectedValue>;
+    api: any;
 
     constructor(actionCreator: ActionCreatorType<Return, Arg, RejectedValue>) {
         this.actionCreator = actionCreator;
