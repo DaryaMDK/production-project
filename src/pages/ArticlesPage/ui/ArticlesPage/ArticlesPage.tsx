@@ -1,19 +1,19 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import cls from './ArticlePage.module.scss';
+import cls from './ArticlesPage.module.scss';
 
-interface ArticlePageProps {
-  className?: string;
+interface ArticlesPageProps {
+    className?: string;
 }
 
-const ArticlePage = ({ className }: ArticlePageProps) => {
+const ArticlesPage = (props: ArticlesPageProps) => {
+    const { className } = props;
     const { t } = useTranslation();
+
     return (
-        <div className={classNames(cls.ArticlePage, {}, [className])}>
-            ARTICLES PAGE
-        </div>
+        <div className={classNames(cls.ArticlesPage, {}, [className])} />
     );
 };
 
-export default memo(ArticlePage);
+export default memo(ArticlesPage);

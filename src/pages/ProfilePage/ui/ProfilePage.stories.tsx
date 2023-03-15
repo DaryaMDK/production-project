@@ -1,10 +1,11 @@
+import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
 import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 
 export default {
     title: 'pages/ProfilePage',
@@ -22,11 +23,11 @@ Normal.decorators = [StoreDecorator({
     profile: {
         form: {
             username: 'admin',
-            age: 28,
-            country: Country.Russia,
-            lastname: 'Miloradova',
-            first: 'Daria',
-            city: 'Moscow',
+            age: 22,
+            country: Country.Ukraine,
+            lastname: 'ulbi tv',
+            first: 'asd',
+            city: 'asf',
             currency: Currency.USD,
         },
     },
@@ -38,11 +39,11 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
     profile: {
         form: {
             username: 'admin',
-            age: 28,
-            country: Country.Russia,
-            lastname: 'Miloradova',
-            first: 'Daria',
-            city: 'Moscow',
+            age: 22,
+            country: Country.Ukraine,
+            lastname: 'ulbi tv',
+            first: 'asd',
+            city: 'asf',
             currency: Currency.USD,
         },
     },
