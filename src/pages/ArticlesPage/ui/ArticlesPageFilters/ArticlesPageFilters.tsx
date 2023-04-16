@@ -1,5 +1,5 @@
 import {
-    ArticleSortField, ArticleSortSelector, ArticleType, ArticleView, ArticleViewSelector, ArticleTypeTabs,
+    ArticleSortField, ArticleSortSelector, ArticleType, ArticleTypeTabs, ArticleView, ArticleViewSelector,
 } from 'entities/Article';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

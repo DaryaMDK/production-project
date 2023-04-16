@@ -1,18 +1,17 @@
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
-import { profileReducer } from 'entities/Profile';
-import { addCommentFormReducer } from 'features/addCommentForm/model/slice/addCommentFormSlice';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { articleDetailsPageReducer } from '../../../../pages/ArticleDetailsPage/model/slices/index';
+import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
+import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice';
+import { addCommentFormReducer } from 'features/addCommentForm/model/slice/addCommentFormSlice';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsPage: articleDetailsPageReducer,
+    articleDetailsPage: articleDetailsReducer,
 };
 
 export const StoreDecorator = (
