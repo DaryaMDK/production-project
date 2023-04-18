@@ -46,7 +46,7 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role', 'as'],
+                ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role', 'as', 'border'],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 140 }],
@@ -58,6 +58,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'linebreak-style': 0,
+        'no-restricted-globals': 'off',
     },
     globals: {
         __IS_DEV__: true,
