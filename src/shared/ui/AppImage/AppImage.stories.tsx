@@ -1,6 +1,4 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { AppImage } from './AppImage';
 
 export default {
@@ -14,4 +12,8 @@ export default {
 const Template: ComponentStory<typeof AppImage> = (args) => <AppImage {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = {
+    src: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
+    width: '400px',
+    height: '300px',
+};

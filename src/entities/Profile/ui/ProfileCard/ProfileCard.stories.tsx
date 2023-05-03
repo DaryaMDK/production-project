@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
@@ -20,11 +19,11 @@ Primary.args = {
     data: {
         username: 'admin',
         age: 22,
-        country: Country.Ukraine,
-        lastname: 'ulbi tv',
+        country: Country.Russia,
+        lastname: 'daria',
         first: 'asd',
         city: 'asf',
-        currency: Currency.USD,
+        currency: Currency.RUB,
         avatar,
     },
 };

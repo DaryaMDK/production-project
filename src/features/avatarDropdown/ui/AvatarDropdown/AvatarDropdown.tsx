@@ -37,7 +37,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             className={classNames('', {}, [className])}
             items={[
                 ...(isAdminPanelAvailable ? [{
-                    content: t('Админка'),
+                    content: t('Админ панель'),
                     href: getRouteAdmin(),
                 }] : []),
                 {

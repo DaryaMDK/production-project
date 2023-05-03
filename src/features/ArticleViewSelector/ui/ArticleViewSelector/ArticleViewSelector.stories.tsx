@@ -1,6 +1,4 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { ArticleViewSelector } from './ArticleViewSelector';
 
 export default {

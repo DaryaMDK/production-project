@@ -13,28 +13,29 @@ export function buildPlugins({
 }: BuildOptions): webpack.WebpackPluginInstance[] {
     const isProd = !isDev;
 
-    const plugins = [new HtmlWebpackPlugin({
-        template: paths.html,
-    }),
-    new webpack.ProgressPlugin(),
-    new webpack.DefinePlugin({
-        __IS_DEV__: JSON.stringify(isDev),
-        __API__: JSON.stringify(apiUrl),
-        __PROJECT__: JSON.stringify(project),
-    }),
-    new CircularDependencyPlugin({
-        exclude: /node_modules/,
-        failOnError: true,
-    }),
-    new ForkTsCheckerWebpackPlugin({
-        typescript: {
-            diagnosticOptions: {
-                semantic: true,
-                syntactic: true,
+    const plugins = [
+        new HtmlWebpackPlugin({
+            template: paths.html,
+        }),
+        new webpack.ProgressPlugin(),
+        new webpack.DefinePlugin({
+            __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl),
+            __PROJECT__: JSON.stringify(project),
+        }),
+        new CircularDependencyPlugin({
+            exclude: /node_modules/,
+            failOnError: true,
+        }),
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                diagnosticOptions: {
+                    semantic: true,
+                    syntactic: true,
+                },
+                mode: 'write-references',
             },
-            mode: 'write-references',
-        },
-    }),
+        }),
     ];
 
     if (isDev) {

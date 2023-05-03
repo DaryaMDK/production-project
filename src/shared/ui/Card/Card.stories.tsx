@@ -1,8 +1,8 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { Text } from '../Text/Text';
 import { Card } from './Card';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'shared/Card',
@@ -18,3 +18,9 @@ export const Normal = Template.bind({});
 Normal.args = {
     children: <Text title="test" text="text text" />,
 };
+
+export const Dark = Template.bind({});
+Dark.args = {
+    children: <Text title="test" text="text text" />,
+};
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

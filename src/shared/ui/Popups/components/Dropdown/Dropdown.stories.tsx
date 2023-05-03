@@ -1,11 +1,11 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Button } from '../../../Button/Button';
+import { Button, ButtonSize } from '../../../Button/Button';
 import { Dropdown } from './Dropdown';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'shared/Dropdown',
+    title: 'shared/Popups/Dropdown',
     component: Dropdown,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -29,3 +29,19 @@ Normal.args = {
         },
     ],
 };
+export const Dark = Template.bind({});
+Dark.args = {
+    trigger: <Button size={ButtonSize.L}>Open</Button>,
+    items: [
+        {
+            content: 'first',
+        },
+        {
+            content: 'second',
+        },
+        {
+            content: 'third',
+        },
+    ],
+};
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
