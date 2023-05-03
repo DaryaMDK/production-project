@@ -20,16 +20,15 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 - `npm run lint:ts:fix` - Исправление ts файлов линтером
 - `npm run lint:scss` - Проверка scss файлов style линтером
 - `npm run lint:scss:fix` - Исправление scss файлов style линтером
-- `npm run test:unit` - Хапуск unit тестов с jest
-- `npm run test:ui` - Хапуск скриншотных тестов с loki
+- `npm run test:unit` - Запуск unit тестов с jest
+- `npm run test:ui` - Запуск скриншотных тестов с loki
 - `npm run test:ui:ok` - Подтверждение новых скриншотов
 - `npm run test:ui:ci` - Запуск скриншотных тестов в CI
 - `npm run test:ui:report` - Генерация полного отчета для скриншотных тестов
 - `npm run test:ui:json` - Генерация json отчета для скриншотных тестов
 - `npm run test:ui:html` - Генерация HTML отчета для скриншотных тестов
-- `npm run storybook` - запуск Storybook
+- `npm run storybook` - Запуск Storybook
 - `npm run storybook:build` - Сборка storybook билда
-- `npm run prepare` - прекоммит хуки
 - `npm run generate:slice` - Скрипт для генерации FSD слайсов
 
 ----
@@ -70,7 +69,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 В проекте используется eslint для проверки typescript кода и stylelint для проверки файлов со стилями.
 
 Также для строгого контроля главных архитектурных принципов
-используется собственный eslint plugin *eslint-plugin-ulbi-tv-plugin*,
+используется собственный eslint plugin *eslint-plugin-fsd-mdk-plugin*,
 который содержит 3 правила
 1) path-checker - запрещает использовать абсолютные импорты в рамках одного модуля
 2) layer-imports - проверяет корректность использования слоев с точки зрения FSD
@@ -133,7 +132,7 @@ Clear.args = {
 ## Конфигурация проекта
 
 Для разработки проект содержит 2 конфига:
-1. Webpack - ./config/build
+1. webpack - ./config/build
 2. vite - vite.config.ts
 
 Оба сборщика адаптированы под основные фичи приложения.
@@ -153,8 +152,6 @@ Clear.args = {
 Конфигурация github actions находится в /.github/workflows.
 В ci прогоняются все виды тестов, сборка проекта и сторибука, линтинг.
 
-В прекоммит хуках проверяем проект линтерами, конфиг в /.husky
-
 ----
 
 ### Работа с данными
@@ -168,7 +165,6 @@ Clear.args = {
 [DynamicModuleLoader](/src/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader.tsx)
 
 ----
-
 
 ## Сущности (entities)
 
@@ -196,3 +192,39 @@ Clear.args = {
 - [profileRating](/src/features/profileRating)
 - [ThemeSwitcher](/src/features/ThemeSwitcher)
 - [UI](/src/features/UI)
+
+## Страницы (pages)
+
+- [AboutPage](/src/pages/AboutPage)
+- [AdminPanelPage](/src/pages/AdminPanelPage)
+- [ArticleDetailsPage](/src/pages/ArticleDetailsPage)
+- [ArticleEditPage](/src/pages/ArticleEditPage)
+- [ArticlesPage](/src/pages/ArticlesPage)
+- [ForbiddenPage](/src/pages/ForbiddenPage)
+- [MainPage](/src/pages/MainPage)
+- [NotFoundPage](/src/pages/NotFoundPage)
+- [ProfilePage](/src/pages/ProfilePage)
+
+## Виджеты (widgets)
+
+- [ErrorPage](/src/widgets/ErrorPage)
+- [Navbar](/src/widgets/Navbar)
+- [Page](/src/widgets/Page)
+- [PageLoader](/src/widgets/PageLoader)
+- [Sidebar](/src/widgets/Sidebar)
+
+## Переиспользуемый код (shared)
+
+- [api](/src/shared/api)
+- [assets](/src/shared/assets)
+- [config](/src/shared/config)
+- [const](/src/shared/const)
+- [lib](/src/shared/lib)
+- [types](/src/shared/types)
+- [ui](/src/shared/ui)
+
+## Настройки (app)
+
+- [providers](/src/app/providers)
+- [styles](/src/app/styles)
+- [types](/src/app/types)
