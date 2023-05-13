@@ -49,7 +49,7 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role', 'as', 'border'],
+                ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role', 'as', 'border', 'feature'],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 140 }],
@@ -63,6 +63,7 @@ module.exports = {
         'arrow-body-style': 'off',
         'linebreak-style': 0,
         'no-restricted-globals': 'off',
+        'react/no-unstable-nested-components': 'warn',
     },
     globals: {
         __IS_DEV__: true,
