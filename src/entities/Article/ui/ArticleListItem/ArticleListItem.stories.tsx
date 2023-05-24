@@ -1,6 +1,4 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-
 import { ArticleView } from '../../model/consts/articleConsts';
 import { ArticleListItem } from './ArticleListItem';
 import { Article } from '../../model/types/article';
@@ -13,7 +11,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleListItem>;
 
-const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+const Template: ComponentStory<typeof ArticleListItem> = (args) => (
+    <ArticleListItem {...args} />
+);
 
 const article = {
     id: '1',
@@ -27,12 +27,7 @@ const article = {
         username: 'Ulbi tv',
         avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
     },
-    type: [
-        'IT',
-        'SCIENCE',
-        'POLITICS',
-        'ECONOMICS',
-    ],
+    type: ['IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'],
     blocks: [
         {
             id: '1',

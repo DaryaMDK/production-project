@@ -1,5 +1,4 @@
 import { Story } from '@storybook/react';
-// eslint-disable-next-line ulbi-tv-plugin/layer-imports
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
 import { Theme } from '@/shared/const/theme';
 

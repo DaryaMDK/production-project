@@ -45,5 +45,14 @@
   "Редактирование статьи с ID = ": "Update article with ID = ",
   "PROD app": "PROD app",
   "Создать статью": "Create article",
-  "Админ панель": "Admin"
+  "Админ панель": "Admin",
+  "Профиль пользователя": "User profile",
+  "Закрыть": "Close",
+  "{{count}} просмотров_zero": "{{count}} views",
+  "{{count}} просмотров_one": "{{count}} view",
+  "{{count}} просмотров_other": "{{count}} views",  
+  "Настройки пользователя": "User settings",
+  "Вариант интерфейса": "Interface option",
+  "Старый": "Old",
+  "Новый": "New"
 }

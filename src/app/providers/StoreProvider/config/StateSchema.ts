@@ -7,9 +7,7 @@ import { LoginSchema } from '@/features/AuthByUsername';
 import { UserSchema } from '@/entities/User';
 import { CounterSchema } from '@/entities/Counter';
 import { ArticleDetailsSchema } from '@/entities/Article';
-import {
-    ArticleDetailsPageSchema,
-} from '@/pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { UISchema } from '@/features/UI';
@@ -22,7 +20,6 @@ export interface StateSchema {
     ui: UISchema;
     [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
-    // Асинхронные редюсеры
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
@@ -39,7 +36,7 @@ export interface ReducerManager {
     reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
     add: (key: StateSchemaKey, reducer: Reducer) => void;
     remove: (key: StateSchemaKey) => void;
-    // true - вмонтирован, false - демонтирован
+    // true - mounting, false - unmounting
     getMountedReducers: () => MountedReducers;
 }
 

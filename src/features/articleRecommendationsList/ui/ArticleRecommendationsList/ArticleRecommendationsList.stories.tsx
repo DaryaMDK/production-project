@@ -1,4 +1,6 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Article } from '@/entities/Article';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
@@ -11,7 +13,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleRecommendationsList>;
 
-const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => <ArticleRecommendationsList {...args} />;
+const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (
+    <ArticleRecommendationsList {...args} />
+);
 
 const article: Article = {
     id: '1',
